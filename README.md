@@ -10,3 +10,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * React JavaScript
 * HTML and CSS
 * Responsive design
+* CSS Transitions
+* React Icons: **https://react-icons.github.io/react-icons**

@@ -1,24 +1,26 @@
-import classes from './Form.module.css';
+
 import { useState } from 'react';
 import Input from '../Input/Input';
+import React from 'react';
 
 const Form = (props) => {
     const [inputValue, setInputValue] = useState('');
     
     const onSubmitHandler = (event) => {
         event.preventDefault()
-
+        props.onSubmit(inputValue)
+        console.log('form')
     }
 
-    const onChangeHandler = (event) => {
-        setInputValue(event.target.value)
+    const onChangeHandler = (array) => {
+        setInputValue(array)
     }
 
-    return <form className={classes.form} onSubmit={onSubmitHandler}>
+    return <form onSubmit={onSubmitHandler}>
         <Input 
-        onChange={onChangeHandler}
-        placeholder={'Search movie...'}></Input>
-        <p>{inputValue}</p>
+        onSend={onChangeHandler}
+        placeholder={'Search movie...'}
+        ></Input>
     </form>
 };
 

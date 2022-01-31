@@ -1,17 +1,20 @@
 
+
 .search {
     position: relative;
-    height: 30px;
+    height: 35px;
+    margin: 1rem;
 }
 
 .search input {
     background-color: #fff;
     border: 0;
     font-size: 18px;
-    padding: 3px;
-    width: 30px;
+    padding: 12px;
     transition: width 0.3s ease;
-    height: 30px;
+    width: 35px;
+    height: 35px;
+    border-radius: 12px 12px 12px 12px;
 }
 
 .btn {
@@ -22,9 +25,10 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 30px;
-    width: 30px;
+    height: 35px;
+    width: 35px;
     transition: transform 0.3s ease;
+    border-radius: 12px 12px 12px 12px;
 }
 
 .btn:focus,
@@ -34,8 +38,11 @@
 
 .search.active .input {
     width: 200px;
+    border-radius: 12px 0px 0px 12px;
+
 }
 
 .search.active .btn {
     transform: translateX(198px);
+    border-radius: 0px 12px 12px 0px;
 }
