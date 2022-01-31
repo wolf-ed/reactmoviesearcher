@@ -3,6 +3,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 # React Movie Searcher
 
 ## Author: Ed Wolf
+
+## Link: **https://modest-swanson-499e88.netlify.app/**
 ## API: **https://www.themoviedb.org/**
 
 ## Technologies
