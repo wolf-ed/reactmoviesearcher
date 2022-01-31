@@ -30,9 +30,9 @@ function App() {
     setInputValue(newValue)
   }
 
+  //Display initial array of movies when open the page
   useEffect(() => {
     getMovies(API_URL)
-    console.log(movieArrayState)
   }, [])
 
   useEffect(() => {
