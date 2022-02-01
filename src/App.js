@@ -1,6 +1,8 @@
 import Header from './components/Header/Header';
 import MoviesList from './components/MoviesList/MoviesList';
 import React, { Fragment, useEffect, useState } from 'react';
+import cine from './image/cine.png';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const [inputValue, setInputValue] = useState('');
@@ -16,13 +18,14 @@ function App() {
     const data = await res.json()
     setMovieArrayState([]);
     data.results.forEach((movie) => {
+      const defaultImage = (movie.poster_path) ? (IMG_PATH + movie.poster_path) : cine;
       const newMovie = {
         title: movie.title,
-        poster_path: IMG_PATH + movie.poster_path,
+        poster_path: defaultImage,
         vote_average: movie.vote_average,
         overview: movie.overview
       };
-      setMovieArrayState(prevState => { return [newMovie, ...prevState] })
+      setMovieArrayState(prevState => { return [...prevState, newMovie] })
     })
   }
 
@@ -47,6 +50,7 @@ function App() {
     <Fragment>
       <Header onInput={inputHandler} />
       <MoviesList moviesArray={movieArrayState} />
+      <Footer />
     </Fragment>
   );
 }

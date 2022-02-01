@@ -9,7 +9,7 @@ const Form = (props) => {
     const onSubmitHandler = (event) => {
         event.preventDefault()
         props.onSubmit(inputValue)
-        console.log('form')
+        setInputValue('')
     }
 
     const onChangeHandler = (array) => {
@@ -18,8 +18,9 @@ const Form = (props) => {
 
     return <form onSubmit={onSubmitHandler}>
         <Input 
-        onSend={onChangeHandler}
         placeholder={'Search movie...'}
+        value={inputValue}
+        onType={onChangeHandler}
         ></Input>
     </form>
 };

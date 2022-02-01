@@ -1,0 +1,23 @@
+
+.footer {
+    background-color: #373b69;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: bolder;
+}
+
+a.gitLink{
+    text-decoration: none;
+    font-family: inherit;
+    width: fit-content;
+    color: white;
+    margin-left: 0.5rem;
+    letter-spacing: 2px;
+}
+
+a.gitLink:hover {
+    text-decoration: underline;
+    font-size: 1.7rem;
+}

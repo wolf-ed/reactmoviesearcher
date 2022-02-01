@@ -6,7 +6,6 @@ import React from 'react';
 
 const Input = (props) => {
 const [expand, setExpand] = useState(false)
-const [enteredValue, setEnteredValue] = useState('');
     
     let classesClicked = `${classes.search} ${expand && classes.active}`
 
@@ -15,8 +14,7 @@ const [enteredValue, setEnteredValue] = useState('');
     }
 
     const onChangeHandler = event => {
-        props.onSend(event.target.value)
-        setEnteredValue(event.target.value)
+        props.onType(event.target.value)
     }
 
     return <div className={classesClicked}>
@@ -24,7 +22,7 @@ const [enteredValue, setEnteredValue] = useState('');
         type='text'
         className={classes.input}
         placeholder={props.placeholder}
-        value={enteredValue}
+        value={props.value}
         onChange={onChangeHandler}></input>
         <button className={classes.btn} onClick={expandHandler}><ImSearch /></button>
     </div>
